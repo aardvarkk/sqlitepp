@@ -226,7 +226,7 @@ public:
   }
 
 private:
-  db& operator=(const db&) { }    // no assignment
+  db& operator=(const db&) = delete;    // no assignment
 
 private:
   ::sqlite3*        db_;    // associated db
@@ -467,7 +467,7 @@ public:
   }
 
 private:
-  transaction& operator=(const transaction&) { }    // no assignment
+  transaction& operator=(const transaction&) = delete;    // no assignment
 
 private:
   const db& db_;
